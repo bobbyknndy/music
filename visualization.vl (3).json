@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Basketball Team's SRS 1980-2020",
+  "width": 1000,
+  "height": 500,
+  "padding": 5,
+  "data": {
+    "url": "https://raw.githubusercontent.com/bobbyknndy/grunge/master/Grunge.csv"
+  },
+  "mark": {
+    "type": "point"
+  },
+  "encoding": {
+    "x": {
+      "field": "Peak Date",
+      "type": "temporal",
+      "axis": {
+        "title": "Peak Date"
+      }
+    },
+    "y": {
+      "field": "Peak Rank",
+      "type": "quantitative",
+      "sort": "descending"
+    },
+    "color": {
+      "field": "Artist",
+      "type": "nominal"
+    },
+    "shape": {
+      "field": "Artist",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Song",
+        "type": "nominal"
+      },
+      {
+        "field": "Artist",
+        "type": "nominal"
+      },
+      {
+        "field": "Album",
+        "type": "nominal"
+      },
+      {
+        "field": "Release Date",
+        "type": "temporal"
+      },
+      {
+        "field": "Peak Date",
+        "type": "temporal"
+      },
+      {
+        "field": "Peak Rank",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "config": {}
+}
